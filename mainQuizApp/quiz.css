@@ -5,13 +5,13 @@
   box-sizing: border-box;
 }
 
-body {
+/* body {
   background: #fff;
-}
+} */
 
 .app {
   background: #fff;
-  width: 90%;
+  width: 40%;
   max-width: 600px;
   margin: 100px auto 0;
   border-radius: 10px;
@@ -36,6 +36,11 @@ body {
   font-weight: 600;
 }
 
+#time {
+  font-size: 30px;
+  color: #fff;
+}
+
 .btn {
   background: #fff;
   color: #222;
@@ -45,13 +50,15 @@ body {
   padding: 10px;
   margin: 10px 0;
   text-align: left;
-  border-radius: 4px;
+  border-radius: 50px;
   cursor: pointer;
+  border: unset;
+  box-shadow: 0 0 4px #484141;
 }
 
 .btn:hover:not([disabled]) {
-  background: #222;
-  color: #fff;
+  background: #ece8e8;
+  color: #000;
 }
 
 .btn:disabled {
@@ -59,11 +66,14 @@ body {
 }
 
 .correct {
-  background-color: #9aeabc;
+  background-color: rgb(5, 89, 5);
+  color: #fff;
 }
 
 .incorrect {
-  background-color: #ff9393;
+  background-color: rgb(169, 7, 7);
+  border: unset;
+  color: #fff;
 }
 
 #next-btn {

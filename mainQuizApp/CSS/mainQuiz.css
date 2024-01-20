@@ -45,9 +45,9 @@ input {
 #quiz_form {
   /* border: 1px solid green; */
   padding: 40px;
-  max-width: 50%;
+  width: 100%;
   border-radius: 5px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   background-color: #f7f7f7f7;
   box-shadow: 0 0 5px #888484;
   margin-bottom: 70px;
@@ -72,33 +72,4 @@ label {
 
   margin-left: 40px;
   gap: 20px;
-}
-
-input[type="radio"] {
-  transform: scale(1.5);
-  margin-right: 3px;
-}
-
-/* .options {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: spa;
-} */
-
-#submitBtn {
-  padding: 10px 40px;
-  font-size: 25px;
-  border-radius: 5px;
-  border: unset;
-  background-color: rgb(46, 4, 40);
-  color: #fff;
-}
-
-#submitBtn:hover {
-  padding: 10px 40px;
-  font-size: 25px;
-  border-radius: 5px;
-  border: 2px solid rgb(46, 4, 40);
-  background-color: #fff;
-  color: rgb(46, 4, 40);
 }

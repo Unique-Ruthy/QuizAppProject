@@ -113,22 +113,57 @@ const questions = [
 const questionBox = document.getElementById("question");
 const answerBtn = document.getElementById("answer-buttons");
 const nextBtn = document.getElementById("next-btn");
+const timeCount = document.getElementById("time");
 
 // VARIABLES
 let currentQuestionIndex = 0;
 let score = 0;
+let questionNo;
+let timeOut;
+
+let timeDuration = 120;
+
+// function resetTimer() {
+//   clearTimeout(timeOut);
+//   timeCount.innerHTML = "Time Left: 2:00";
+//   timeDuration = 120;
+// }
+
+function startTime() {
+  let timeValue = timeDuration;
+  let updateTime = () => {
+    const minutes = Math.floor(timeValue / 60);
+    const seconds = timeValue % 60;
+    timeCount.innerHTML = `Time Left: ${minutes}:${seconds}`;
+    console.log(timeCount);
+    if (timeValue === 0) {
+      alert("Time up!");
+      showScore();
+    } else if (questionNo > 10) {
+      showScore();
+    } else {
+      timeValue--;
+      timeOut = setTimeout(updateTime, 1000);
+    }
+    //timeOut = setTimeout(updateTime, 1000); // set the timeout before calling updateTime
+  };
+  updateTime();
+}
 
 function startQuiz() {
+  // clearTimeout(timeOut);
   currentQuestionIndex = 0;
   score = 0;
   nextBtn.innerHTML = "Next";
+  // resetTimer();
   showQuestion();
+  startTime();
 }
 
 function showQuestion() {
   reset();
   let currentQuestion = questions[currentQuestionIndex];
-  let questionNo = currentQuestionIndex + 1;
+  questionNo = currentQuestionIndex + 1;
   questionBox.innerHTML = questionNo + ". " + currentQuestion.question;
 
   currentQuestion.answers.forEach((answer) => {
@@ -174,10 +209,15 @@ function selectAnswer(e) {
 }
 
 function showScore() {
+  clearTimeout(timeOut);
+  // resetTimer();
   reset();
   questionBox.innerHTML = `You scored ${score} out of ${questions.length}!`;
-  nextBtn.innerHTML = "Play Again";
+  nextBtn.innerHTML = "Try Again";
   nextBtn.style.display = "block";
+  nextBtn.addEventListener("click", () => {
+    window.location.reload();
+  });
 }
 
 function handleNextBtn() {
@@ -192,7 +232,7 @@ nextBtn.addEventListener("click", () => {
   if (currentQuestionIndex < questions.length) {
     handleNextBtn();
   } else {
-    startQuiz();
+    showScore();
   }
 });
 startQuiz();

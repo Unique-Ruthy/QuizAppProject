@@ -23,6 +23,7 @@ modalContent.addEventListener("click", (e) => {
 
 const continueBtn = () => {
   window.location.href = "mainQuizPage.html";
+  startTime();
 };
 
 continueButton.addEventListener("click", continueBtn);

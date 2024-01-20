@@ -7,29 +7,20 @@
     <link rel="stylesheet" href="./CSS/mainQuiz.css" />
     <link rel="stylesheet" href="./mainQuizApp/quiz.css" />
   </head>
-  <body>
+  <body class="innerContainer">
     <div id="quiz-container">
       <div class="header">
         <h1 class="quizTitle">Quiz</h1>
-        <h1 class="timer">
-          Timer <input style="margin-left: 15px" type="text" value="00:00" />
-        </h1>
+        <div id="time">Time-Left</div>
       </div>
 
       <div id="quiz_form">
         <div class="question">
           <h2 id="question">What is the question1</h2>
-          <div id="answer-buttons">
-            <!-- <button class="btn">Answer1</button>
-            <button class="btn">Answer2</button>
-            <button class="btn">Answer3</button>
-            <button class="btn">Answer4</button> -->
-          </div>
+          <div id="answer-buttons"></div>
         </div>
 
-        <div id="Btns">
-          <button id="next-btn">Next</button>
-        </div>
+        <button id="next-btn">Next</button>
       </div>
     </div>
 
