@@ -76,7 +76,8 @@
   color: #fff;
 }
 
-#next-btn {
+#next-btn,
+#exit-btn {
   background: #001e4d;
   color: #fff;
   font-weight: 500;

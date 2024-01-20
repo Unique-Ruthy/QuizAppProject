@@ -114,6 +114,7 @@ const questionBox = document.getElementById("question");
 const answerBtn = document.getElementById("answer-buttons");
 const nextBtn = document.getElementById("next-btn");
 const timeCount = document.getElementById("time");
+const exitBtn = document.getElementById("exit-btn");
 
 // VARIABLES
 let currentQuestionIndex = 0;
@@ -217,6 +218,10 @@ function showScore() {
   nextBtn.style.display = "block";
   nextBtn.addEventListener("click", () => {
     window.location.reload();
+  });
+  exitBtn.style.display = "block";
+  exitBtn.addEventListener("click", () => {
+    window.location.assign("/index.html");
   });
 }
 
