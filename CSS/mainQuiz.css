@@ -8,12 +8,17 @@
   justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: blue;
+  height: 100vh;
+  background-image: url(/Assets/questionbcg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center calc(50% + 50%);
 }
 
-/* CSS FOR THE MAINQUIZPAGE */
-/* #quiz-container {
-} */
+.quizTitle {
+  color: #fff;
+}
 
 .header {
   display: flex;
@@ -37,6 +42,8 @@ input {
   background-color: #f7f7f7f7;
   box-shadow: 0 0 5px #888484;
   margin-bottom: 70px;
+  transform: translateX(-50px);
+  transform: translateY(30px);
 }
 
 .question {
@@ -62,4 +69,26 @@ label {
 
   margin-left: 40px;
   gap: 20px;
+}
+
+@media (max-width: 767px) {
+  .quizTitle {
+    font-size: 20px;
+    color: #fff;
+  }
+
+  #quiz_form {
+    padding: 40px;
+    width: 350px;
+    border-radius: 5px;
+    margin: 0 auto;
+    background-color: #f7f7f7f7;
+    box-shadow: 0 0 5px #888484;
+    margin-bottom: 70px;
+  }
+
+  #question {
+    font-size: 15px;
+    /* text-align: left; */
+  }
 }

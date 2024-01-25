@@ -38,6 +38,7 @@
 
 #time {
   font-size: 30px;
+  font-weight: bold;
   color: #fff;
 }
 
@@ -78,7 +79,7 @@
 
 #next-btn,
 #exit-btn {
-  background: #001e4d;
+  background: #023136;
   color: #fff;
   font-weight: 500;
   width: 150px;
@@ -88,4 +89,11 @@
   border-radius: 4px;
   cursor: pointer;
   display: none;
+}
+
+@media (max-width: 767px) {
+  #time {
+    font-size: 20px;
+    font-weight: bold;
+  }
 }
