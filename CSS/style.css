@@ -165,14 +165,14 @@ p {
   }
 
   .pageTitle {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 800;
   }
 
   .btn {
     margin-top: 18px;
-    padding: 7px 30px;
-    font-size: 15px;
+    padding: 5px 30px;
+    font-size: 13px;
   }
 
   .modal {
