@@ -14,4 +14,4 @@ Research and Implementation Hurdles: The development of the Quiz Application inv
 A forthcoming feature involves the incorporation of subtle animations for each displayed question, with the aim of elevating user engagement. Although challenges were encountered in the initial attempts, upcoming updates will explore solutions to seamlessly integrate animations, generate questions through an API, and deliver a more dynamic user experience.
 
 **Access the Live Demo:**
-Experience the site by following this link:
+Experience the site by following this link: https://quiz-app-project-delta.vercel.app/
